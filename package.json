@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "This is a React-based dashboard for viewing historical IEX data",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "build": "echo hello",
