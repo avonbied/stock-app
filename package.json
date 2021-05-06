@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --open",
+    "start": "webpack serve",
     "test": "echo test",
     "watch": "webpack watch"
   },
