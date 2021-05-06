@@ -1,0 +1,31 @@
+{
+  "name": "dash-stocks",
+  "version": "0.0.1",
+  "description": "This is a React-based dashboard for viewing historical IEX data",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "clean": "rm -r dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avonbied/dash-stocks.git"
+  },
+  "keywords": [
+    "react",
+    "fintech",
+    "micro-frontend"
+  ],
+  "author": "Alexander von Biedenfeld",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avonbied/dash-stocks/issues"
+  },
+  "homepage": "https://github.com/avonbied/dash-stocks#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+  }
+}
