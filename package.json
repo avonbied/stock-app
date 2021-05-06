@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "echo hello",
     "clean": "rm -r dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,6 +27,5 @@
   "dependencies": {
     "express": "^4.17.1"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
