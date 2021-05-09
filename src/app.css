@@ -1,0 +1,7 @@
+main { 
+  display: flex;
+  flex-flow: row wrap;
+}
+main > * {
+  flex: 0 1 50%;
+}

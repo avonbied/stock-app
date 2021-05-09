@@ -1,11 +1,23 @@
+html * { box-sizing: inherit; }
+*, *::after, *::before {
+	box-sizing: inherit;
+}
+html, body {
+	box-sizing: border-box;
+	position: relative;
+	font-size: 16px;
+	font-family: Arial, Verdana, sans-serif;
+}
 body, #root {
+	position: relative;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	height: 100vh;
-	font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-}
-#root {
+	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
+	font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+code {
+	font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
 }
