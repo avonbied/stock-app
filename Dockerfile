@@ -1,6 +1,7 @@
 FROM hayd/centos-deno:1.0.0
 
-EXPOSE 1993  # The port that your application listens to.
+# The port that your application listens to.
+EXPOSE 1993
 
 WORKDIR /app
 
@@ -17,4 +18,4 @@ ADD . .
 # Compile the main app so that it doesn't need to be compiled each startup/entry.
 RUN deno fetch main.ts
 
-CMD ["--allow-net", "main.ts"]
+CMD ["--allow-net", "server.ts"]
