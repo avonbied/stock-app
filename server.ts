@@ -1,4 +1,4 @@
-import { serve } from "./deps";
+import { serve } from "./deps.ts";
 
 const server = serve({ port: 8080 });
 console.log(`HTTP webserver running.  Access it at:  http://localhost:8080/`);
