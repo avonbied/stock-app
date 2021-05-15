@@ -5,6 +5,7 @@ EXPOSE 1993
 
 WORKDIR /app
 
+RUN groupadd -r deno && useradd --no-log-init -r -g deno deno
 # Prefer not to run as root.
 USER deno
 
