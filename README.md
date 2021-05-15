@@ -1,2 +1,3 @@
-# dash-stocks
+# stock-app/dashboard
+
 Investment Dashboard
