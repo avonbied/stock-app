@@ -5,10 +5,6 @@ EXPOSE 1993
 
 WORKDIR /app
 
-RUN groupadd -r deno && useradd --no-log-init -r -g deno deno
-# Prefer not to run as root.
-USER deno
-
 # Cache the dependencies as a layer (the following two steps are re-run only when deps.ts is modified).
 # Ideally fetch deps.ts will download and compile _all_ external files used in main.ts.
 COPY deps.ts .
