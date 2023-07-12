@@ -1,4 +1,4 @@
-FROM hayd/alpine-deno:1.9.2
+FROM node:lts-alpine
 
 # The port that your application listens to.
 EXPOSE 8080

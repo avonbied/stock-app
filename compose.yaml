@@ -1,0 +1,5 @@
+service:
+  dashboard:
+    image: node:lts-alpine
+    volumes:
+      - dashboard:/app
