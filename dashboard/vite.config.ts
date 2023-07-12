@@ -7,8 +7,11 @@ export default defineConfig({
 	// Normally this would be unnecessary, but we
 	// need it for learn.svelte.dev
 	server: {
-		fs: {
-			strict: false
+		host: true,
+		port: (process.env.PORT ?? 8080),
+		watch: {
+			usePolling: true,
+			interval: 10000
 		}
 	}
 });

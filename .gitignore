@@ -95,7 +95,7 @@ dist
 .vuepress/dist
 
 # Serverless directories
-.serverless/
+.svelte-kit/
 
 # FuseBox cache
 .fusebox/
