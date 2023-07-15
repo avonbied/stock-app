@@ -2,7 +2,6 @@
 let currentDate = new Date().toLocaleDateString();
 </script>
 
-
 <header>
 	<h1>React + TypeScript! {currentDate}</h1>
 </header>
