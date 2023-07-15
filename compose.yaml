@@ -1,5 +1,11 @@
-service:
+services:
   dashboard:
-    image: node:lts-alpine
+    build: ./dashboard
+    ports:
+      - 9091:8080
     volumes:
-      - dashboard:/app
+      - ./dashboard:/home/node/app:rw
+      - /home/node/app/node_modules
+      - /home/node/app/.svelte-kit
+    working_dir: /home/node/app
+    command: yarn dev

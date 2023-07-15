@@ -8,7 +8,10 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
+		"strict": true,
+		"paths": {
+			"@libs": ["src/lib/*"]
+		}
 	},
 	"include": ["src/**/*.ts", "svelte.config.ts", "vite.config.ts"]
 }

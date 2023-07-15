@@ -9,9 +9,15 @@ export default defineConfig({
 	server: {
 		host: true,
 		port: (process.env.PORT ?? 8080),
+		strictPort: true,
 		watch: {
 			usePolling: true,
 			interval: 10000
 		}
+	},
+	preview: {
+		host: true,
+		port: (process.env.PORT ?? 8080),
+		strictPort: true
 	}
 });
