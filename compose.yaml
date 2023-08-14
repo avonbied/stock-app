@@ -1,6 +1,14 @@
 services:
+# FRONTEND
+  router:
+    build: ./router
+    networks:
+      - frontend
+
   dashboard:
     build: ./dashboard
+    networks:
+      - frontend
     ports:
       - 9091:8080
     volumes:
@@ -9,3 +17,25 @@ services:
       - /home/node/app/.svelte-kit
     working_dir: /home/node/app
     command: yarn dev
+
+# BACKEND BRIDGE
+  search:
+    build: ./api
+    networks:
+      - frontend
+      - backend
+
+# BACKEND
+  rethinkdb:
+    build: ./db
+    networks:
+      - backend
+  
+  cache:
+    build: ./db/cache
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:
