@@ -1,38 +1,39 @@
 services:
 # FRONTEND
   router:
-    build: ./router
+    build: router
     networks:
       - frontend
 
   dashboard:
-    build: ./dashboard
+    build: dashboard
     networks:
       - frontend
     ports:
       - 9091:8080
-    volumes:
-      - ./dashboard:/home/node/app:rw
-      - /home/node/app/node_modules
-      - /home/node/app/.svelte-kit
-    working_dir: /home/node/app
-    command: yarn dev
+    develop:
+      watch:
+        - path: dashboard/package.json
+          action: rebuild
+        - path: dashboard/
+          action: sync
+          target: /home/node/app
 
 # BACKEND BRIDGE
   search:
-    build: ./api
+    build: api
     networks:
       - frontend
       - backend
 
 # BACKEND
   rethinkdb:
-    build: ./db
+    build: db
     networks:
       - backend
   
   cache:
-    build: ./db/cache
+    build: db/cache
     networks:
       - backend
 
